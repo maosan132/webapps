@@ -32,6 +32,7 @@ class FrontController extends DooController {
                 $cte = Doo::session()->get('cte');
                 if (is_object($cte) && ($cte instanceof M02Clientes)) {
                 	$data['id_cliente'] = $cte->id_cliente;
+                    $data['usrname'] = $cte->nombre_facturacion;
                 } else {
                 	$data['id_cliente'] = null;
                 }
